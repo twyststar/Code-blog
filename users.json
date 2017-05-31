@@ -1,0 +1,10 @@
+{ "users": [{
+    "name": "Ilene",
+    "bio": "Ilene is blonde",
+    "img": "https://uploads.scratch.mit.edu/users/avatars/1657/8737.png"
+  }, {
+    "name": "Star",
+    "bio": "Star is smart",
+    "img": "http://www.clipartbest.com/cliparts/9Tp/6Ek/9Tp6EkeLc.png"
+  }]
+}

@@ -1,0 +1,5 @@
+<h3>Click on a user to see their profile(linked list)</h3>
+<button  name="button">Create new user</button>
+{{#each model.users as |user|}}
+  <hr> <h4>{{user.name}}, posts {{user.posts.length}}</h4> <hr>
+{{/each}}
