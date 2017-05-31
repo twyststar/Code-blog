@@ -3,9 +3,11 @@
 
 
 <div class="col-xs-6 well">
-  <p>
-    insert list of blogs
-  </p>
+  <ul>
+    {{#each model.posts as |post|}}
+      <li>{{post.title}}{{post.user.name}}</li>
+    {{/each}}
+  </ul>
 </div>
 
 <div class="col-xs-6 well">
@@ -13,5 +15,3 @@
     insert blog previews here
   </p>
 </div>
-
-<h4>figure where to put user create/new blog/stuff</h4>

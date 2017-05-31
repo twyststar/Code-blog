@@ -1,5 +1,13 @@
-<h3>Click on a user to see their profile(linked list)</h3>
-<button  name="button">Create new user</button>
-{{#each model.users as |user|}}
-  <hr> <h4>{{user.name}}, posts {{user.posts.length}}</h4> <hr>
-{{/each}}
+
+<div class=" well">
+  <h4>To write a new blog post, first select your user name or create a new one!</h4>
+  {{new-user saveUser2="saveUser3" model=model}}
+  <br>
+  <h4>Or, if you are already an existing user:</h4>
+
+  <ul>
+    {{#each model.users as |bob|}}
+      {{user-tile bob=bob}}
+    {{/each}}
+  </ul>
+</div>

@@ -1,7 +1,8 @@
+<h3>Click on a user to see their profile(linked list)</h3>
 <div class="well">
   <div class="well">
     {{#each model.users as |user|}}
-      {{user.name}} <br> {{user.bio}} <img src="{{user.img}}" alt=""/> <hr>
+      {{user.name}}, posts {{user.posts.length}} <br> {{user.bio}} <img src="{{user.img}}" alt=""/> <hr>
     {{/each}}
   </div>
 </div>
