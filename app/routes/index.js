@@ -7,7 +7,14 @@ export default Ember.Route.extend({
       posts: this.store.findAll('post')
     });
   },
-
+  previewPost(post){
+    preview = []
+    prep = post.content.split('');
+    for (var i = 0; i == 25; i++){
+      preview.push(prep[i]);
+    }
+    return preview.join('');
+  },
   actions: {
     saveUser(params) {
       var newUser = this.store.createRecord('user', params);

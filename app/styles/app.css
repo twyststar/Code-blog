@@ -3,8 +3,8 @@ img {
   width: auto;
 }
 
-.comp {
-  border: 2px solid blue;
+h3, h4, h5{
+  text-align: center;
 }
 
 .panel-profile {

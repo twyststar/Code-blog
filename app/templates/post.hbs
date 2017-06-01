@@ -1,12 +1,20 @@
-<div class=" well">
+<div class="panel panel-default">
 
-  <h2>{{model.title}}</h2>
+  <div class="panel-heading">
+    <h2>{{model.title}}</h2>
+    <h3>By {{model.user.name}}</h3>
+  </div>
+  <div class="panel-body">
+    <p>  {{model.content}}</p>
+  </div>
+  <div class="panel-footer">
+    <p> See more from {{#link-to 'user' model.user.id}}{{model.user.name}}{{/link-to}}</p>
+  </div>
 
-  <p>
-    {{model.content}}
-  </p>
 
-  {{update-post post=model update="update" destroyPost="destroyPost"}}
-  <br>
+
+
 
 </div>
+{{update-post post=model update="update" destroyPost="destroyPost"}}
+<br>
