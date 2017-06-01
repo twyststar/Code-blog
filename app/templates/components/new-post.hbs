@@ -6,28 +6,21 @@
   <div class="panel-body">
     <div>
       <form>
-        <div class="form-group">
-          <label for="user">Select User Name</label><br>
-          <select class="selectpicker">
-          {{#each model.users as |user|}}
-            <option value={{user.id}}>{{user.name}}</option>
-          {{/each}}
-          </select>
-        </div>
+
         <div class="form-group">
         <label for="title">Post Title</label>
         {{input class="form-control" value=title id="title"}}
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="tags">Category/Tag</label>
         {{input class="form-control" value=tags id="tags"}}
-      </div>
+      </div> -->
       <div class="form-group">
         <label for="content">Content</label>
         {{textarea class="form-control" rows="6" value=content id="content"}}
       </div>
       <div class="panel-footer">
-        <button class="btn bg-info"{{action 'savePost1'}}>Publish</button>
+        <button class="btn bg-info"{{action 'savePost'}}>Publish</button>
       </div>
       </form>
     </div>

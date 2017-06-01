@@ -7,15 +7,16 @@ export default Ember.Component.extend({
       this.set('addNewPost', true);
     },
 
-    savePost1() {
+    savePost() {
       var params = {
         title: this.get('title'),
         user: this.get('user'),
-        post: this.get('post'),
-        tags: this.get('tags'),
+        post: this.get('content'),
+        // tags: this.get('tags'),
       };
+      console.log('inside new-post' + params);
       this.set('addNewPost', false);
-      this.sendAction('savePost2', params)
+      this.sendAction('savePost', params)
     }
   }
 });
