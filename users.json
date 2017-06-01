@@ -1,10 +1,18 @@
 { "users": [{
     "name": "Ilene",
     "bio": "Ilene is blonde",
-    "img": "https://uploads.scratch.mit.edu/users/avatars/1657/8737.png"
+    "img": "https://uploads.scratch.mit.edu/users/avatars/1657/8737.png",
+    "posts": [{
+      "title": "Test Title",
+      "content": "test content"
+      }]
   }, {
     "name": "Star",
     "bio": "Star is smart",
-    "img": "http://www.clipartbest.com/cliparts/9Tp/6Ek/9Tp6EkeLc.png"
+    "img": "http://www.clipartbest.com/cliparts/9Tp/6Ek/9Tp6EkeLc.png",
+    "posts": [{
+      "title": "Test Title",
+      "content": "test content"
+      }]
   }]
 }

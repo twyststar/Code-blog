@@ -1,14 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return Ember.RSVP.hash({
-      users: this.store.findAll('user'),
-      posts: this.store.findAll('post')
-    });
+  model(params) {
+    console.log("let's find some posts: " + params.posts);
+    return this.store.findRecord('user', params.user_id);
   },
   actions: {
     savePost(params) {
+      console.log('inside the save user.js');
       var newPost = this.store.createRecord('post', params);
       var user = params.user;
       user.get('posts').addObject(newPost);

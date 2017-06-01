@@ -1,3 +1,6 @@
 <li>
-  {{#link-to 'user-portal' user.id}}{{user.name}}{{/link-to}}
+  {{#link-to 'user' user.id}}{{user.name}}{{/link-to}}
+  {{#each user.posts as |post|}}
+    {{post.title}}
+  {{/each}}
 </li>
