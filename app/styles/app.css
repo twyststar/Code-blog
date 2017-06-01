@@ -7,6 +7,10 @@ h3, h4, h5{
   text-align: center;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #a2ed87;
+}
 .panel-profile {
   position: static;
 }
