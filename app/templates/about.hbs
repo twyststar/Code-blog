@@ -4,6 +4,7 @@
   </div>
   <div class="col-xs-6 ">
     {{#each model.users as |user|}}
+    {{#link-to 'user' user.id}}
     <div class="panel panel-default panel-profile ">
       <div class="panel-heading pro-heading" style="background-image: url('http://2.bp.blogspot.com/-PEsedSbB8i4/VXAFPTSp3VI/AAAAAAAAAc0/UxEf7dxsIVg/s640/coding%2Bin%2Bschools.jpg'"></div>
       <div class="panel-body pro-body text-center">
@@ -12,6 +13,7 @@
         <p class="bio">{{user.bio}}</p>
       </div>
     </div>
+    {{/link-to}}
     {{/each}}
   </div>
 </div>

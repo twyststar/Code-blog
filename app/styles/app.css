@@ -3,6 +3,13 @@ img {
   width: auto;
 }
 
+.codehead {
+  background-color: #2f332e;
+  color: #a6d899;
+}
+.codehead h3 {
+  color: white;
+}
 h3, h4, h5{
   text-align: center;
 }
@@ -14,7 +21,10 @@ a:hover {
 .panel-profile {
   position: static;
 }
-
+.codebody {
+  background-color: #484c47;
+  color: #f97777;
+}
 .pro-heading {
   height: 120px;
 }

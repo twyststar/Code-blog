@@ -16,11 +16,11 @@
   <div class="col-xs-6 well">
     {{#each model.posts as |post|}}
     {{#link-to 'post' post.id}}
-    <div class="panel panel-primary">
-      <div class="panel-heading">
+    <div class="panel ">
+      <div class="panel-heading codehead">
         {{post.title}}
       </div>
-      <div class="panel-body">
+      <div class="panel-body codebody">
         <p>
           {{post.preview}}.....
         </p>

@@ -1,13 +1,13 @@
-<div class="panel panel-default">
+<div class="panel">
 
-  <div class="panel-heading">
-    <h2>{{model.title}}</h2>
-    <h3>By {{model.user.name}}</h3>
+  <div class="panel-heading codehead">
+    <h2>&lt; {{model.title}} &gt;</h2>
+    <h3>{ By {{model.user.name}} } </h3>
   </div>
-  <div class="panel-body">
+  <div class="panel-body codebody">
     <p>  {{model.content}}</p>
   </div>
-  <div class="panel-footer">
+  <div class="panel-footer codehead">
     <p> See more from {{#link-to 'user' model.user.id}}{{model.user.name}}{{/link-to}}</p>
   </div>
 
