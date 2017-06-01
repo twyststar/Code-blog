@@ -13,11 +13,6 @@ export default Ember.Component.extend({
         content: this.get('content'),
         // tags: this.get('tags'),
         user: this.get('user'),
-<<<<<<< HEAD
-        post: this.get('content'),
-        // tags: this.get('tags'),
-=======
->>>>>>> test
       };
       console.log('inside new-post' + params);
       this.set('addNewPost', false);
