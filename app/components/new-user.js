@@ -6,6 +6,7 @@ export default Ember.Component.extend({
     userFormShow() {
       this.set('addNewUser', true);
     },
+    
     saveUser() {
       var params = {
         name: this.get('name'),

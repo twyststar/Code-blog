@@ -3,9 +3,9 @@
 
   <h2>More information about {{model.name}}</h2>
 
-  {{user-detail user=model}}
+  {{user-detail user=model destroyUser="destroyUser" destroyPost="destroyPost"}}
 
-  {{new-post savePost="savePost" user=model}}
+  {{new-post savePost="savePost" user=model destroyPost="destroyPost"}}
 
 
 </div>

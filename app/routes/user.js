@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     console.log("let's find some posts: " + params.posts);
     return this.store.findRecord('user', params.user_id);
   },
+
   actions: {
 
     savePost(params) {
@@ -18,10 +19,19 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    saveUser(params) {
-      var newUser = this.store.createRecord('user', params);
-      newUser.save();
-      this.transitionTo('index');
+    destroyPost(review) {
+      post.destroyRecord();
     },
-  },
+    
+    destroyUser(user) {
+      var post_deletions = user.get('posts').map(function(post) {
+        return post.destroyRecord();
+      });
+      Ember.RSVP.all(post_deletions).then(function() {
+        return user.destroyRecord();
+      });
+    this.transitionTo('index');
+    },
+  }
+
 });

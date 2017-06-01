@@ -1,14 +1,17 @@
-<p>{{user.name}}</p>
-<br>
-<p><img src={{user.img}} alt=""></p>
-<p>
-  {{user.bio}}
-</p>
-<div class="well">
-  <h3>{{user.name}}'s posts:</h3>
-  <ul>
-    {{#each user.posts as |post|}}
-      {{post.title}}
-    {{/each}}
-</ul>
+<div class="comp">
+  <p>{{user.name}}</p>
+  <br>
+  <p><img src={{user.img}} alt=""></p>
+  <p>
+    {{user.bio}}
+  </p>
+  <div class="well">
+    <h3>{{user.name}}'s posts:</h3>
+    <ul>
+      {{#each user.posts as |post|}}
+        {{post.title}}
+      {{/each}}
+  </ul>
+  </div>
+  <button class="btn bg-danger" {{action 'delete' user}}>Delete User</button>
 </div>
