@@ -6,3 +6,25 @@ img {
 .comp {
   border: 2px solid blue;
 }
+
+.panel-profile {
+  position: static;
+}
+
+.pro-heading {
+  height: 120px;
+}
+
+.pro-body{
+  height: 120px;
+
+}
+
+.panel-profile-img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: -67px;
+
+}
