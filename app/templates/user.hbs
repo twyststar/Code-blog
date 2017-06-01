@@ -4,8 +4,10 @@
   <h2>More information about {{model.name}}</h2>
 
   {{user-detail user=model destroyUser="destroyUser" destroyPost="destroyPost"}}
-
+  {{update-user user=model update="update"}}
+  <br>
   {{new-post savePost="savePost" user=model destroyPost="destroyPost"}}
+
 
 
 </div>

@@ -19,10 +19,20 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
+    update(user, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          user.set(key,params[key]);
+        }
+      });
+      user.save();
+      this.transitionTo('index');
+    },
+
     destroyPost(review) {
       post.destroyRecord();
     },
-    
+
     destroyUser(user) {
       var post_deletions = user.get('posts').map(function(post) {
         return post.destroyRecord();

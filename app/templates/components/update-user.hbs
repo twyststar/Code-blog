@@ -1,0 +1,32 @@
+{{#if updateUser}}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h1>New User:</h1>
+  </div>
+  <div class="panel-body">
+    <div>
+      <form>
+        <div class="form-group">
+        <label for="name">User Name</label>
+        {{input class="form-control" value=name id="name" placeholder=user.name}}
+      </div>
+      <div class="form-group">
+        <label for="img">Image URL</label>
+        {{input class="form-control" value=img id="img" placeholder=user.img}}
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        {{textarea class="form-control" rows="6" value=bio id="bio" placeholder=user.bio}}
+      </div>
+      <div class="panel-footer">
+        <button class="btn bg-success"{{action 'update' user}}>Save</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{{else}}
+  <button class="btn bg-success"{{action 'updateUserFormShow'}}>Update User</button>
+{{/if}}
