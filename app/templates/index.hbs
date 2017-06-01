@@ -2,10 +2,10 @@
 <h5>Browse blog entries below, or visit the contribute page to sign up and add your own!</h5>
 
 
-<div class="col-xs-6 well">
+<div class="col-xs-3 well">
   <ul>
     {{#each model.posts as |post|}}
-      <li>{{post.title}}{{post.user.name}}</li>
+      <li>{{post.title}}, by {{post.user.name}}</li>
     {{/each}}
   </ul>
 </div>
@@ -14,4 +14,17 @@
   <p>
     insert blog previews here
   </p>
+</div>
+
+<div class="col-xs-3 well">
+  <h4>To write a new blog post, first select your user name or create a new one!</h4>
+  {{new-user saveUser="saveUser" model=model}}
+  <br>
+  <h4>Or, if you are already an existing user:</h4>
+
+  <ul>
+    {{#each model.users as |user|}}
+      {{user-tile user=user}}
+    {{/each}}
+  </ul>
 </div>

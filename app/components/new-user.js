@@ -7,14 +7,14 @@ export default Ember.Component.extend({
       this.set('addNewUser', true);
     },
 
-    saveUser1() {
+    saveUser() {
       var params = {
         name: this.get('name'),
         bio: this.get('bio'),
         img: this.get('img'),
       };
       this.set('addNewUser', false);
-      this.sendAction('saveUser2', params)
+      this.sendAction('saveUser', params)
     }
   }
 });

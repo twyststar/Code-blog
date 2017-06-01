@@ -1,13 +1,13 @@
 
 <div class=" well">
   <h4>To write a new blog post, first select your user name or create a new one!</h4>
-  {{new-user saveUser2="saveUser3" model=model}}
+  {{new-user saveUser="saveUser" model=model}}
   <br>
   <h4>Or, if you are already an existing user:</h4>
 
   <ul>
-    {{#each model.users as |bob|}}
-      {{user-tile bob=bob}}
+    {{#each model.users as |user|}}
+      {{user-tile user=user}}
     {{/each}}
   </ul>
 </div>
